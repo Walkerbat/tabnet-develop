@@ -132,7 +132,7 @@ print(f"F1 Score: {f1}")
 print(f"AUC: {auc}")'''
 
 
-import pandas as pd
+'''import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, roc_auc_score
 from pytorch_tabnet.tab_model import TabNetClassifier
@@ -210,4 +210,84 @@ f1 = f1_score(y_test, y_pred)
 auc = roc_auc_score(y_test, y_pred_proba)
 
 print(f"F1 SCORE：{f1}")
+print(f"AUC：{auc}")'''
+
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score, roc_auc_score
+from pytorch_tabnet.tab_model import TabNetClassifier
+from pytorch_tabnet.pretraining import TabNetPretrainer
+from torch.utils.data import DataLoader, TensorDataset
+import torch
+
+# 加载数据集
+df = pd.read_csv("../csv/insurance_data.csv")
+
+# 预处理数据
+df.fillna(0, inplace=True)
+
+# 对分类变量进行独热编码
+categorical_columns = ['Insured.sex', 'Marital', 'Car.use', 'Region', 'Territory']
+df = pd.get_dummies(df, columns=categorical_columns, drop_first=True)
+
+# 将数据拆分为训练集和测试集
+X_train, X_test, y_train, y_test = train_test_split(
+    df.drop(['NB_Claim', 'AMT_Claim'], axis=1), df['AMT_Claim'], test_size=0.2, random_state=42
+)
+
+# 转换为 PyTorch 张量
+X_train_tensor = torch.tensor(X_train.values.astype('float32'), dtype=torch.float32)
+y_train_tensor = torch.tensor(y_train.values.astype('float32'), dtype=torch.float32)
+X_test_tensor = torch.tensor(X_test.values.astype('float32'), dtype=torch.float32)
+y_test_tensor = torch.tensor(y_test.values.astype('float32'), dtype=torch.float32)
+
+# 将 y_test_tensor 的类型转换为 torch.long
+y_test_tensor = y_test_tensor.long()
+
+# 创建 DataLoader
+train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
+test_dataset = TensorDataset(X_test_tensor, y_test_tensor.long())  # 将 y_test_tensor 转换为 torch.long
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True, num_workers=0)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False, num_workers=0)
+
+# 训练 TabNet 预训练器
+tabnet_pretrainer = TabNetPretrainer(n_steps=5, gamma=1.3)
+
+# 设置 max_epochs 参数
+max_epochs_pretrainer = 10
+
+tabnet_pretrainer.fit(
+    X_train_tensor.numpy(),  # 这里需要将张量转换回 NumPy 数组
+    max_epochs=max_epochs_pretrainer,
+    patience=20,
+    batch_size=64,
+    virtual_batch_size=32,
+    num_workers=0,
+)
+
+# 训练 TabNet 分类器
+tabnet_classifier = TabNetClassifier(n_steps=5, gamma=1.3)
+
+tabnet_classifier.fit(
+    X_train_tensor.numpy(),
+    y_train_tensor.numpy(),
+    eval_set=[(X_test_tensor.numpy(), y_test_tensor.numpy())],  # 这里不需要转换 y_test_tensor 的类型，因为在创建 DataLoader 时已经转换过了
+    max_epochs=100,
+    patience=20,
+    batch_size=64,
+    virtual_batch_size=32,
+    num_workers=0,
+)
+
+
+# 在测试集上进行预测
+y_pred_proba = tabnet_classifier.predict_proba(X_test_tensor.numpy())[:, 1]
+y_pred = (y_pred_proba > 0.5).astype(int)
+
+# 计算 F1 分数和 AUC
+f1 = f1_score(y_test, y_pred)
+auc = roc_auc_score(y_test, y_pred_proba)
+
+print(f"F1 分数：{f1}")
 print(f"AUC：{auc}")

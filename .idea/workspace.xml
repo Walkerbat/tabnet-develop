@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c4a90e2-09ac-4a2f-9ac4-acee2a266929" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pytorch_tabnet/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch_tabnet/LightGBM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch_tabnet/XGboost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytorch_tabnet/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch_tabnet/TabNet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +89,9 @@
       <workItem from="1705205232188" duration="632000" />
       <workItem from="1705205895441" duration="2032000" />
       <workItem from="1705981587270" duration="5882000" />
-      <workItem from="1706003202866" duration="6556000" />
+      <workItem from="1706003202866" duration="8950000" />
+      <workItem from="1709890400470" duration="26000" />
+      <workItem from="1709890436017" duration="14789000" />
     </task>
     <servers />
   </component>
