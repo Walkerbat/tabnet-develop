@@ -221,7 +221,7 @@ from pytorch_tabnet.pretraining import TabNetPretrainer
 from torch.utils.data import DataLoader, TensorDataset
 import torch
 
-# 加载数据集
+# 加载数据
 df = pd.read_csv("../csv/insurance_data.csv")
 
 # 预处理数据
