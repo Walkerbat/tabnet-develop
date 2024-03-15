@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from lightgbm import LGBMRegressor
 from sklearn.metrics import mean_squared_error, f1_score, roc_auc_score
 
-# 加载数据集
+# 加载数据
 df = pd.read_csv("../csv/insurance_data.csv")
 
 # 预处理数据

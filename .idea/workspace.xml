@@ -92,7 +92,7 @@
       <workItem from="1706003202866" duration="8950000" />
       <workItem from="1709890400470" duration="26000" />
       <workItem from="1709890436017" duration="15000000" />
-      <workItem from="1710514618901" duration="299000" />
+      <workItem from="1710514618901" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="增加三种算法对比">
       <created>1710059649359</created>
@@ -122,7 +122,28 @@
       <option name="project" value="LOCAL" />
       <updated>1710514768742</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="增加三种算法对比">
+      <created>1710515008626</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710515008626</updated>
+    </task>
+    <task id="LOCAL-00006" summary="增加三种算法对比">
+      <created>1710515186976</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710515186976</updated>
+    </task>
+    <task id="LOCAL-00007" summary="增加三种算法对比">
+      <created>1710515220247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710515220247</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

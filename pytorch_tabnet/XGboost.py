@@ -4,7 +4,7 @@ from sklearn.metrics import f1_score, roc_auc_score
 from sklearn.model_selection import train_test_split
 import xgboost as xgb
 
-# 加载数据集
+# 加载数据
 df = pd.read_csv("insurance_data.csv")
 
 # 预处理数据
