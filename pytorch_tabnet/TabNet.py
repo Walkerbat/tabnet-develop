@@ -177,7 +177,7 @@ test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False, num_workers
 tabnet_pretrainer = TabNetPretrainer(n_steps=5, gamma=1.3)
 
 # 设置 max_epochs 参数
-max_epochs_pretrainer = 20
+max_epochs_pretrainer = 10
 
 tabnet_pretrainer.fit(
     X_train_tensor.numpy(),  # 这里需要将张量转换回 NumPy 数组
@@ -211,6 +211,7 @@ auc = roc_auc_score(y_test, y_pred_proba)
 
 print(f"F1 SCORE：{f1}")
 print(f"AUC：{auc}")'''
+
 
 
 import pandas as pd
@@ -255,7 +256,7 @@ test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False, num_workers
 tabnet_pretrainer = TabNetPretrainer(n_steps=5, gamma=1.3)
 
 # 设置 max_epochs 参数
-max_epochs_pretrainer = 10
+max_epochs_pretrainer = 5
 
 tabnet_pretrainer.fit(
     X_train_tensor.numpy(),  # 这里需要将张量转换回 NumPy 数组

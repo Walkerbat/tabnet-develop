@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import torch
 # Form implementation generated from reading ui file 'System.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
@@ -14,122 +14,133 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(670, 501)
+        MainWindow.resize(1100, 750)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Container = QtWidgets.QGroupBox(self.centralwidget)
-        self.Container.setGeometry(QtCore.QRect(100, 20, 531, 401))
+        self.Container.setEnabled(True)
+        self.Container.setGeometry(QtCore.QRect(150, 50, 851, 601))
         self.Container.setStyleSheet("QGroupBox {\n"
 "    border: 1px solid black;\n"
 "    background-color: #00BFFF;\n"
+"    width:100px;\n"
+"    height:200px;\n"
 "}")
+        self.Container.setFlat(False)
+        self.Container.setCheckable(False)
         self.Container.setObjectName("Container")
         self.duration_edit = QtWidgets.QLineEdit(self.Container)
-        self.duration_edit.setGeometry(QtCore.QRect(120, 80, 113, 20))
+        self.duration_edit.setGeometry(QtCore.QRect(260, 120, 113, 20))
         self.duration_edit.setObjectName("duration_edit")
         self.duration = QtWidgets.QLabel(self.Container)
-        self.duration.setGeometry(QtCore.QRect(30, 80, 61, 16))
+        self.duration.setGeometry(QtCore.QRect(80, 110, 171, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.duration.setFont(font)
         self.duration.setObjectName("duration")
         self.insured_age = QtWidgets.QLabel(self.Container)
-        self.insured_age.setGeometry(QtCore.QRect(30, 120, 81, 20))
+        self.insured_age.setGeometry(QtCore.QRect(80, 150, 171, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.insured_age.setFont(font)
         self.insured_age.setObjectName("insured_age")
         self.insured_age_edit = QtWidgets.QLineEdit(self.Container)
-        self.insured_age_edit.setGeometry(QtCore.QRect(120, 120, 113, 20))
+        self.insured_age_edit.setGeometry(QtCore.QRect(260, 160, 113, 20))
         self.insured_age_edit.setObjectName("insured_age_edit")
         self.insured_sex = QtWidgets.QLabel(self.Container)
-        self.insured_sex.setGeometry(QtCore.QRect(30, 160, 81, 20))
+        self.insured_sex.setGeometry(QtCore.QRect(80, 190, 171, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.insured_sex.setFont(font)
         self.insured_sex.setObjectName("insured_sex")
         self.insured_sex_edit = QtWidgets.QLineEdit(self.Container)
-        self.insured_sex_edit.setGeometry(QtCore.QRect(120, 160, 113, 20))
+        self.insured_sex_edit.setGeometry(QtCore.QRect(260, 200, 113, 20))
         self.insured_sex_edit.setObjectName("insured_sex_edit")
         self.car_age = QtWidgets.QLabel(self.Container)
-        self.car_age.setGeometry(QtCore.QRect(30, 200, 54, 12))
+        self.car_age.setGeometry(QtCore.QRect(83, 230, 161, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.car_age.setFont(font)
         self.car_age.setObjectName("car_age")
         self.car_age_edit = QtWidgets.QLineEdit(self.Container)
-        self.car_age_edit.setGeometry(QtCore.QRect(120, 200, 113, 20))
+        self.car_age_edit.setGeometry(QtCore.QRect(260, 240, 113, 20))
         self.car_age_edit.setObjectName("car_age_edit")
         self.marital = QtWidgets.QLabel(self.Container)
-        self.marital.setGeometry(QtCore.QRect(30, 240, 54, 12))
+        self.marital.setGeometry(QtCore.QRect(83, 270, 161, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.marital.setFont(font)
         self.marital.setObjectName("marital")
         self.marital_edit = QtWidgets.QLineEdit(self.Container)
-        self.marital_edit.setGeometry(QtCore.QRect(120, 240, 113, 20))
+        self.marital_edit.setGeometry(QtCore.QRect(260, 280, 113, 20))
         self.marital_edit.setObjectName("marital_edit")
         self.car_use_edit = QtWidgets.QLineEdit(self.Container)
-        self.car_use_edit.setGeometry(QtCore.QRect(400, 80, 113, 20))
+        self.car_use_edit.setGeometry(QtCore.QRect(680, 120, 113, 20))
         self.car_use_edit.setText("")
         self.car_use_edit.setObjectName("car_use_edit")
         self.car_use = QtWidgets.QLabel(self.Container)
-        self.car_use.setGeometry(QtCore.QRect(280, 80, 54, 21))
+        self.car_use.setGeometry(QtCore.QRect(430, 110, 241, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.car_use.setFont(font)
         self.car_use.setObjectName("car_use")
         self.credit_score_edit = QtWidgets.QLineEdit(self.Container)
-        self.credit_score_edit.setGeometry(QtCore.QRect(400, 120, 113, 20))
+        self.credit_score_edit.setGeometry(QtCore.QRect(680, 160, 113, 20))
         self.credit_score_edit.setObjectName("credit_score_edit")
         self.credit_score = QtWidgets.QLabel(self.Container)
-        self.credit_score.setGeometry(QtCore.QRect(280, 120, 91, 20))
+        self.credit_score.setGeometry(QtCore.QRect(430, 150, 231, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.credit_score.setFont(font)
         self.credit_score.setObjectName("credit_score")
         self.region_edit = QtWidgets.QLineEdit(self.Container)
-        self.region_edit.setGeometry(QtCore.QRect(400, 160, 113, 20))
+        self.region_edit.setGeometry(QtCore.QRect(680, 200, 113, 20))
         self.region_edit.setObjectName("region_edit")
         self.region = QtWidgets.QLabel(self.Container)
-        self.region.setGeometry(QtCore.QRect(280, 160, 81, 20))
+        self.region.setGeometry(QtCore.QRect(430, 190, 271, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.region.setFont(font)
         self.region.setObjectName("region")
         self.total_miles_drive_edit = QtWidgets.QLineEdit(self.Container)
-        self.total_miles_drive_edit.setGeometry(QtCore.QRect(400, 200, 113, 20))
+        self.total_miles_drive_edit.setGeometry(QtCore.QRect(680, 240, 113, 20))
         self.total_miles_drive_edit.setObjectName("total_miles_drive_edit")
         self.total_miles_drive = QtWidgets.QLabel(self.Container)
-        self.total_miles_drive.setGeometry(QtCore.QRect(280, 200, 121, 20))
+        self.total_miles_drive.setGeometry(QtCore.QRect(430, 230, 271, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.total_miles_drive.setFont(font)
         self.total_miles_drive.setObjectName("total_miles_drive")
         self.territory_edit = QtWidgets.QLineEdit(self.Container)
-        self.territory_edit.setGeometry(QtCore.QRect(400, 240, 113, 20))
+        self.territory_edit.setGeometry(QtCore.QRect(680, 280, 113, 20))
         self.territory_edit.setObjectName("territory_edit")
         self.territory = QtWidgets.QLabel(self.Container)
-        self.territory.setGeometry(QtCore.QRect(280, 240, 71, 20))
+        self.territory.setGeometry(QtCore.QRect(430, 270, 221, 31))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
         self.territory.setFont(font)
         self.territory.setObjectName("territory")
         self.insurance_fee = QtWidgets.QLabel(self.Container)
-        self.insurance_fee.setGeometry(QtCore.QRect(90, 350, 221, 20))
+        self.insurance_fee.setGeometry(QtCore.QRect(-40, 490, 521, 31))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
         self.insurance_fee.setFont(font)
         self.insurance_fee.setStyleSheet("font-weight: bold;")
+        self.insurance_fee.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.insurance_fee.setObjectName("insurance_fee")
         self.insurance_fee_edit = QtWidgets.QLineEdit(self.Container)
-        self.insurance_fee_edit.setGeometry(QtCore.QRect(330, 350, 113, 20))
+        self.insurance_fee_edit.setGeometry(QtCore.QRect(500, 499, 113, 20))
         self.insurance_fee_edit.setReadOnly(True)
         self.insurance_fee_edit.setObjectName("insurance_fee_edit")
         self.done = QtWidgets.QPushButton(self.Container)
-        self.done.setGeometry(QtCore.QRect(320, 290, 81, 31))
+        self.done.setGeometry(QtCore.QRect(510, 370, 121, 51))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.done.setFont(font)
         self.done.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: #f0f0f0; /* 设置背景颜色 */\n"
@@ -149,8 +160,14 @@ class Ui_MainWindow(object):
 "    color:white;\n"
 "}")
         self.done.setObjectName("done")
+        self.done.clicked.connect(self.set_output_data)
         self.clear = QtWidgets.QPushButton(self.Container)
-        self.clear.setGeometry(QtCore.QRect(140, 290, 81, 31))
+        self.clear.setGeometry(QtCore.QRect(260, 370, 121, 51))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.clear.setFont(font)
         self.clear.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: #f0f0f0; /* 设置背景颜色 */\n"
@@ -170,19 +187,30 @@ class Ui_MainWindow(object):
 "    color:white\n"
 "}")
         self.clear.setObjectName("clear")
+        self.clear.clicked.connect(self.clear_line_edit)
         self.title = QtWidgets.QLabel(self.Container)
-        self.title.setGeometry(QtCore.QRect(80, 13, 391, 51))
+        self.title.setGeometry(QtCore.QRect(100, 10, 661, 75))
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(13)
+        font.setPointSize(18)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.title.setFont(font)
         self.title.setStyleSheet("font-weight: bold;\n"
 "letter-spacing: 2px;")
+        self.title.setAlignment(QtCore.Qt.AlignCenter)
         self.title.setWordWrap(False)
         self.title.setObjectName("title")
+        self.label = QtWidgets.QLabel(self.Container)
+        self.label.setGeometry(QtCore.QRect(634, 487, 191, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setStyleSheet("font-weight: bold;")
+        self.label.setObjectName("label")
         self.duration_edit.raise_()
         self.duration.raise_()
         self.insured_age.raise_()
@@ -208,9 +236,10 @@ class Ui_MainWindow(object):
         self.clear.raise_()
         self.car_age.raise_()
         self.title.raise_()
+        self.label.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 670, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1100, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -219,6 +248,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        '''# 创建 TabNet 模型
+        self.model = TabNetClassifier(input_dim=input_dim, output_dim=output_dim)'''
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -237,6 +268,43 @@ class Ui_MainWindow(object):
         self.done.setText(_translate("MainWindow", "DONE"))
         self.clear.setText(_translate("MainWindow", "CLEAR"))
         self.title.setText(_translate("MainWindow", "Insurance cost calculation system"))
+        self.label.setText(_translate("MainWindow", "dollar（$）"))
+
+    def clear_line_edit(self):
+        # 清除所有 LineEdit 的内容
+        for line_edit in self.Container.findChildren(QtWidgets.QLineEdit):
+            line_edit.clear()
+
+    '''def get_input_data(self):
+        # 从各个 QLineEdit 中获取输入数据
+        duration = float(self.duration_edit.text())
+        insured_age = float(self.insured_age_edit.text())
+        insured_sex = float(self.insured_sex_edit.text())
+        car_age = float(self.car_age_edit.text())
+        marital = float(self.marital_edit.text())
+        car_use = float(self.car_use_edit.text())
+        credit_score = float(self.credit_score_edit.text())
+        region = float(self.region_edit.text())
+        total_miles_drive = float(self.total_miles_drive_edit.text())
+        territory = float(self.territory_edit.text())
+
+        # 返回输入数据
+        return torch.tensor([[duration, insured_age, insured_sex, car_age, marital, car_use,
+                              credit_score, region, total_miles_drive, territory]], dtype=torch.float32)
+
+    def insurance_fee_calculate(self):
+        # 获取输入数据
+        inputs = self.get_input_data()
+
+        # 使用 TabNet 模型处理输入数据
+        outputs = self.model(inputs)
+
+        # 将处理后的结果设置到相应的 QLineEdit 中
+        self.set_output_data(outputs)'''
+
+    def set_output_data(self, outputs):
+        # 将处理后的结果设置到相应的 QLineEdit 中
+        self.insurance_fee_edit.setText(str(3875.62))
 
 
 if __name__ == "__main__":
