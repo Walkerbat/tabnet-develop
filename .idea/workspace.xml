@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4a90e2-09ac-4a2f-9ac4-acee2a266929" name="Changes" comment="增加前端">
-      <change afterPath="$PROJECT_DIR$/pytorch_tabnet/draw.py" afterDir="false" />
+    <list default="true" id="3c4a90e2-09ac-4a2f-9ac4-acee2a266929" name="Changes" comment="完善前端和增加图像">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytorch_tabnet/TabNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch_tabnet/TabNet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytorch_tabnet/ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch_tabnet/ex.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/System.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/System.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/System.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/System.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +122,8 @@
       <workItem from="1710946913296" duration="2730000" />
       <workItem from="1711036558767" duration="2111000" />
       <workItem from="1711078741684" duration="4524000" />
-      <workItem from="1711187985408" duration="5402000" />
+      <workItem from="1711187985408" duration="6014000" />
+      <workItem from="1711199604975" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="增加三种算法对比">
       <created>1710059649359</created>
@@ -231,7 +230,56 @@
       <option name="project" value="LOCAL" />
       <updated>1711036654776</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="完善前端和增加图像">
+      <created>1711199213545</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1711199213546</updated>
+    </task>
+    <task id="LOCAL-00017" summary="完善前端和增加图像">
+      <created>1711199294412</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1711199294412</updated>
+    </task>
+    <task id="LOCAL-00018" summary="完善前端和增加图像">
+      <created>1711199377505</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1711199377505</updated>
+    </task>
+    <task id="LOCAL-00019" summary="完善前端和增加图像">
+      <created>1711199414303</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1711199414303</updated>
+    </task>
+    <task id="LOCAL-00020" summary="完善前端和增加图像">
+      <created>1711199495380</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1711199495380</updated>
+    </task>
+    <task id="LOCAL-00021" summary="完善前端和增加图像">
+      <created>1711199567531</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1711199567531</updated>
+    </task>
+    <task id="LOCAL-00022" summary="完善前端和增加图像">
+      <created>1711199619339</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1711199619339</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +326,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加三种算法对比" />
     <MESSAGE value="增加前端" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加前端" />
+    <MESSAGE value="完善前端和增加图像" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善前端和增加图像" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tabnet_develop$utils.coverage" NAME="utils Coverage Results" MODIFIED="1705126912309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytorch_tabnet" />

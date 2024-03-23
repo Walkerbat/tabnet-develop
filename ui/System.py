@@ -264,7 +264,7 @@ class Ui_MainWindow(object):
         self.region.setText(_translate("MainWindow", "Region:"))
         self.total_miles_drive.setText(_translate("MainWindow", "Total-miles Drive:"))
         self.territory.setText(_translate("MainWindow", "Territory:"))
-        self.insurance_fee.setText(_translate("MainWindow", "The insurance fee will be:"))
+        self.insurance_fee.setText(_translate("MainWindow", "The insurance fee(year) will be:"))
         self.done.setText(_translate("MainWindow", "DONE"))
         self.clear.setText(_translate("MainWindow", "CLEAR"))
         self.title.setText(_translate("MainWindow", "Insurance cost calculation system"))
@@ -302,10 +302,15 @@ class Ui_MainWindow(object):
         # 将处理后的结果设置到相应的 QLineEdit 中
         self.set_output_data(outputs)'''
 
-    def set_output_data(self, outputs):
-        # 将处理后的结果设置到相应的 QLineEdit 中
-        self.insurance_fee_edit.setText(str(3875.62))
+    def set_output_data(self):
+        # 检查所有的 QLineEdit 是否都不为空
 
+        if all(line_edit.text() for line_edit in self.Container.findChildren(QtWidgets.QLineEdit)):
+            # 如果所有的 QLineEdit 都不为空，则设置结果到相应的 QLineEdit 中
+            self.insurance_fee_edit.setText(str(3875.62))
+        else:
+            # 如果有任何一个 QLineEdit 为空，则报错
+            QtWidgets.QMessageBox.warning(MainWindow, "Error", "Please fill in all the fields before proceeding.")
 
 if __name__ == "__main__":
     import sys

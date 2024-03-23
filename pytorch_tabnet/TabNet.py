@@ -290,5 +290,5 @@ y_pred = (y_pred_proba > 0.5).astype(int)
 f1 = f1_score(y_test, y_pred)
 auc = roc_auc_score(y_test, y_pred_proba)
 
-print(f"F1 分数：{f1}")
+print(f"F1分数：{f1}")
 print(f"AUC：{auc}")
