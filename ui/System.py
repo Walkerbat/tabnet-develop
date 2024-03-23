@@ -275,7 +275,7 @@ class Ui_MainWindow(object):
         for line_edit in self.Container.findChildren(QtWidgets.QLineEdit):
             line_edit.clear()
 
-    '''def get_input_data(self):
+    def get_input_data(self):
         # 从各个 QLineEdit 中获取输入数据
         duration = float(self.duration_edit.text())
         insured_age = float(self.insured_age_edit.text())
@@ -300,7 +300,7 @@ class Ui_MainWindow(object):
         outputs = self.model(inputs)
 
         # 将处理后的结果设置到相应的 QLineEdit 中
-        self.set_output_data(outputs)'''
+        self.set_output_data(outputs)
 
     def set_output_data(self):
         # 检查所有的 QLineEdit 是否都不为空

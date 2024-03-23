@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4a90e2-09ac-4a2f-9ac4-acee2a266929" name="Changes" comment="完善前端和增加图像">
+    <list default="true" id="3c4a90e2-09ac-4a2f-9ac4-acee2a266929" name="Changes" comment="最终版本0.2(将代码打包成exe文件)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytorch_tabnet/TabNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch_tabnet/TabNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytorch_tabnet/ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch_tabnet/ex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytorch_tabnet/ex.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/System.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/System.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +122,9 @@
       <workItem from="1711036558767" duration="2111000" />
       <workItem from="1711078741684" duration="4524000" />
       <workItem from="1711187985408" duration="6014000" />
-      <workItem from="1711199604975" duration="3867000" />
+      <workItem from="1711199604975" duration="4161000" />
+      <workItem from="1711207009927" duration="57000" />
+      <workItem from="1711207194141" duration="581000" />
     </task>
     <task id="LOCAL-00001" summary="增加三种算法对比">
       <created>1710059649359</created>
@@ -279,7 +280,21 @@
       <option name="project" value="LOCAL" />
       <updated>1711199619339</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="最终版本0.1">
+      <created>1711206964038</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1711206964038</updated>
+    </task>
+    <task id="LOCAL-00024" summary="最终版本0.1">
+      <created>1711207029548</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1711207029548</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +342,8 @@
     <MESSAGE value="增加三种算法对比" />
     <MESSAGE value="增加前端" />
     <MESSAGE value="完善前端和增加图像" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善前端和增加图像" />
+    <MESSAGE value="最终版本0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="最终版本0.1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tabnet_develop$utils.coverage" NAME="utils Coverage Results" MODIFIED="1705126912309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytorch_tabnet" />
